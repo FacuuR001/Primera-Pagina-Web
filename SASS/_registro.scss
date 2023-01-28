@@ -1,0 +1,34 @@
+@use "mixins";
+@use "variables";
+@use "elementos-generales";
+
+.background{
+    height: 100vh;
+    background-image: url(../assets/img/Fondo\ login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .dimension-form{
+        max-height: 100%;
+        width: 500px;
+        background-color: #fff;
+
+        i{
+            cursor: pointer;
+        }
+
+        p{
+            margin-top: -8px;
+        }
+
+        
+        }
+    }
+
+@media (max-width: 430px) {
+    .background {
+        .dimension-form {
+            width: 300px;
+        }
+    }
+}

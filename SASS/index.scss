@@ -1,0 +1,24 @@
+/* Estilos de portada inicial */
+@use "portada-pricipal";
+
+/* Elementos */
+@use "elementos-generales";
+
+
+/* Mixins */
+@use "mixins";
+
+/* Variables */
+@use "variables";
+
+/* Estilos Login */
+@use "login";
+
+/* Estilos Registro */
+@use "registro";
+
+/* Estilos documentacion */
+@use "btn-comenzar";
+
+/* Estilos portada */
+@use "portada";

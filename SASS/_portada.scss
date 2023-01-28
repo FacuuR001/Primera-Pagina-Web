@@ -1,0 +1,24 @@
+@use "mixins";
+@use "variables";
+@use "elementos-generales";
+
+
+header{
+
+    .menu-img{
+
+        #check-img{
+            display: none;
+        }
+
+        .mostrar-menu-img{
+            font-size: 30px;
+            cursor: pointer;
+            transition: .4s;
+        }
+
+        .menu-secundario{
+            display: none;
+        }
+    }
+}

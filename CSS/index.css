@@ -1,0 +1,552 @@
+/* Variables */
+/* Mixins portada principal */
+/* Fin mixins portada principal */
+/* Mixins login */
+/* Mixins generales */
+header {
+  height: 80px;
+  background-color: #4d4d5c;
+  padding: 0 30px 0 20px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  width: 100px;
+  transform: rotate(-90deg);
+  filter: drop-shadow(0px 0px 10px #00ff37);
+  cursor: pointer;
+  transition: 0.4s;
+}
+header .logo:hover {
+  filter: drop-shadow(0px 0px 10px rgb(5, 90, 5));
+  width: 105px;
+}
+header .logo:active {
+  filter: drop-shadow(0px 0px 10px red);
+  transition: 0.1s;
+}
+header #chek-rsp {
+  display: none;
+}
+header .mostrar-menu {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  transition: 0.4s;
+  order: 1;
+}
+header .mostrar-menu:hover {
+  color: #6cc091;
+}
+header .menu-principal a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all 0.4s;
+  padding: 0 10px;
+}
+header .menu-principal a:hover {
+  color: #6cc091;
+}
+header .menu-principal a:active {
+  color: #449165;
+  transition: 0.1s;
+}
+header .menu-principal .esconder-menu {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  transition: 0.4s;
+}
+header .menu-principal .esconder-menu::hover {
+  color: #6cc091;
+}
+
+#section-banner {
+  padding: 0 50px;
+  background-image: url(../assets/img/port-2.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60vh;
+}
+#section-banner::before {
+  content: "";
+  background-color: rgba(77, 77, 92, 0.5);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+}
+#section-banner .content-banner {
+  position: relative;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#section-banner .content-banner h3 {
+  font-size: 30px;
+  font-weight: 400;
+  padding: 10px 0;
+}
+#section-banner .content-banner h3 span {
+  font-weight: 600;
+}
+#section-banner .content-banner .btn-comenzar {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all 0.4s;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 2px solid #6cc091;
+  padding: 20px 40px;
+  align-self: baseline;
+  margin-top: 10px;
+}
+#section-banner .content-banner .btn-comenzar:hover {
+  background-color: #6cc091;
+  box-shadow: 10px 10px 10px #000;
+  transform: translateX(5px) translateY(5px);
+}
+#section-banner .content-banner .btn-comenzar:active {
+  background-color: #449165;
+  transition: 0.2s;
+}
+
+#icons-share {
+  background-color: #c2c2d3;
+  padding: 0px 50px;
+}
+#icons-share .content-footer {
+  height: 147px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#icons-share .content-footer .subir-archivo, #icons-share .content-footer .recomenda-la-pagina, #icons-share .content-footer .like-pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#icons-share .content-footer .subir-archivo a, #icons-share .content-footer .recomenda-la-pagina a, #icons-share .content-footer .like-pagina a {
+  text-align: center;
+  color: #000;
+  width: 40px;
+  align-self: center;
+}
+#icons-share .content-footer .subir-archivo a i, #icons-share .content-footer .recomenda-la-pagina a i, #icons-share .content-footer .like-pagina a i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+#icons-share .content-footer .subir-archivo a i:hover, #icons-share .content-footer .recomenda-la-pagina a i:hover, #icons-share .content-footer .like-pagina a i:hover {
+  color: #0a7e3c;
+}
+#icons-share .content-footer .subir-archivo a i:active, #icons-share .content-footer .recomenda-la-pagina a i:active, #icons-share .content-footer .like-pagina a i:active {
+  color: #105e21;
+}
+#icons-share .content-footer .subir-archivo span, #icons-share .content-footer .recomenda-la-pagina span, #icons-share .content-footer .like-pagina span {
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+}
+#icons-share .content-footer .border-div {
+  border-right: 2px solid #2a8b3f;
+  flex: 1;
+}
+#icons-share .content-footer .border-none-icono-like {
+  border: none;
+}
+
+footer {
+  background-color: #6cc091;
+  height: 520px;
+  width: 100%;
+  padding: 0 50px;
+}
+footer .content-footer {
+  height: 100%;
+  padding-top: 20px;
+}
+footer h3 {
+  text-align: center;
+  margin: 0px 0 20px 0;
+  font-size: 25px;
+}
+footer .fomr-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 350px;
+}
+footer .fomr-contact .form-left {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .fomr-contact .form-right {
+  flex: 1;
+  height: 100%;
+}
+footer .btn-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+footer .btn-footer .btn-enviar {
+  padding: 10px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: transparent;
+  font-weight: 550;
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+footer .btn-footer .btn-enviar:hover {
+  background-color: #b9dac7;
+}
+footer .btn-footer .btn-enviar:active {
+  box-shadow: 10px 10px 10px #000;
+  transform: translateX(1px) translateY(1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    padding: 0 30px 0 10px;
+  }
+  header .logo {
+    width: 90px;
+  }
+  header .mostrar-menu {
+    display: block;
+  }
+  header #chek-rsp:checked ~ .menu-principal {
+    right: 0;
+  }
+  header .menu-principal {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    text-align: start;
+    padding: 100px 0;
+    z-index: 100;
+    width: 50%;
+    height: 100vh;
+    background-color: #4d4d5c;
+    transition: 0.8s;
+  }
+  header .menu-principal a {
+    display: block;
+    padding: 20px;
+  }
+  header .menu-principal a:active {
+    background-color: #020202;
+    transition: 0.1s;
+  }
+  header .menu-principal .esconder-menu {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+}
+@media (max-width: 592px) {
+  header {
+    padding: 0 30px 0 8px;
+  }
+  header .logo {
+    width: 70px;
+  }
+  #icons-share {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+  #icons-share .content-footer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  #icons-share .content-footer .subir-archivo, #icons-share .content-footer .recomenda-la-pagina, #icons-share .content-footer .like-pagina {
+    display: flex;
+    justify-content: center;
+  }
+  #icons-share .content-footer .border-div {
+    border-right: none;
+    border-bottom: 2px solid #2a8b3f;
+  }
+  #icons-share .content-footer .border-none-icono-like {
+    border-bottom: none;
+  }
+  footer {
+    height: 800px;
+  }
+  footer .content-footer .fomr-contact {
+    display: block;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.content-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(../assets/img/Fondo\ login.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.content-principal .background-form {
+  background-color: #fff;
+  max-height: 100%;
+  width: 350px;
+  border-radius: 15px;
+  padding: 20px;
+}
+.content-principal .background-form h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.content-principal .background-form form #label-of-mail {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.content-principal .background-form form .logo-email {
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 300px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.content-principal .background-form form .logo-email label i {
+  margin: 0 8px 0 10px;
+  font-size: 18px;
+  line-height: 40px;
+  cursor: pointer;
+}
+.content-principal .background-form form .logo-email .email-input {
+  width: 260px;
+  font-size: 14px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: none;
+}
+.content-principal .background-form form .logo-email .email-input:focus {
+  outline: none;
+}
+.content-principal .background-form form hr {
+  color: #fff;
+}
+.content-principal .background-form form #label-of-password {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.content-principal .background-form form .logo-password {
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 300px;
+  margin-bottom: 20px;
+}
+.content-principal .background-form form .logo-password .lock i {
+  margin: 0 8px 0 10px;
+  font-size: 18px;
+  line-height: 40px;
+  cursor: pointer;
+}
+.content-principal .background-form form .logo-password .block-password i {
+  margin-left: 15px;
+  cursor: pointer;
+}
+.content-principal .background-form form .logo-password .passsword-input {
+  border: none;
+  width: 210px;
+}
+.content-principal .background-form form .logo-password .passsword-input:focus {
+  outline: none;
+}
+.content-principal .background-form form .checks {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.content-principal .background-form form .checks label {
+  font-size: 15px;
+  cursor: pointer;
+  width: 160px;
+}
+.content-principal .background-form form .checks label #recordar-pass {
+  cursor: pointer;
+}
+.content-principal .background-form form .checks a {
+  margin-bottom: 20px;
+  width: 160px;
+  color: #1671bb;
+}
+.content-principal .background-form form .checks a:active {
+  color: #300663;
+}
+.content-principal .background-form form .input-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #130603;
+}
+.content-principal .background-form form .input-submit .btn-ingresar {
+  padding: 4px 20px 4px 20px;
+  border-radius: 10px;
+  border: none;
+  transition: 0.1s;
+  color: #fff;
+  background-color: #0d6efd;
+}
+.content-principal .background-form form .input-submit .btn-ingresar:active {
+  background-color: transparent;
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px #000;
+  color: #000;
+}
+.content-principal .background-form form .input-submit .btn-ingresar:hover {
+  box-shadow: 5px 5px 10px #000;
+}
+
+@media (max-width: 430px) {
+  .content-principal .background-form {
+    width: 280px;
+  }
+  .content-principal .background-form form .logo-email {
+    width: 240px;
+  }
+  .content-principal .background-form form .logo-password {
+    width: 240px;
+  }
+  .content-principal .background-form form .logo-password .passsword-input {
+    width: 150px;
+  }
+}
+.background {
+  height: 100vh;
+  background-image: url(../assets/img/Fondo\ login.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background .dimension-form {
+  max-height: 100%;
+  width: 500px;
+  background-color: #fff;
+}
+.background .dimension-form i {
+  cursor: pointer;
+}
+.background .dimension-form p {
+  margin-top: -8px;
+}
+
+@media (max-width: 430px) {
+  .background .dimension-form {
+    width: 300px;
+  }
+}
+.comenzar-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(../assets/img/Fondo\ login.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.comenzar-btn .main-center {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: #fff;
+  max-height: 100%;
+  width: 500px;
+  border-radius: 15px;
+  padding: 10px;
+}
+.comenzar-btn .main-center h2 {
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 50px;
+}
+.comenzar-btn .main-center .center-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.comenzar-btn .main-center .center-buttons .btn-register {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  background-color: #198754;
+}
+.comenzar-btn .main-center .center-buttons .btn-register:active {
+  box-shadow: 5px 5px 10px #000;
+}
+.comenzar-btn .main-center .center-buttons .btn-register:hover {
+  background-color: #146c43;
+}
+.comenzar-btn .main-center .center-buttons .btn-login {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  background-color: #0d6efd;
+}
+.comenzar-btn .main-center .center-buttons .btn-login:active {
+  box-shadow: 5px 5px 10px #000;
+}
+.comenzar-btn .main-center .center-buttons .btn-login:hover {
+  background-color: #0a58cd;
+}
+
+@media (max-width: 430px) {
+  .comenzar-btn .main-center {
+    width: 300px;
+  }
+}
+header .menu-img #check-img {
+  display: none;
+}
+header .menu-img .mostrar-menu-img {
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+header .menu-img .menu-secundario {
+  display: none;
+}
+
+/* Estilos de portada inicial */
+/* Elementos */
+/* Mixins */
+/* Variables */
+/* Estilos Login */
+/* Estilos Registro */
+/* Estilos documentacion */
+/* Estilos portada */
+
+/*# sourceMappingURL=index.css.map */

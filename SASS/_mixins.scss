@@ -1,0 +1,88 @@
+@use "variables";
+
+/* Mixins portada principal */
+@mixin esconder-mostrar-menu(){
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: .4s;
+}
+
+@mixin menu-hover(){
+    color: variables.$color-header;
+}
+
+@mixin esconder-mostrar-menu-responsive(){
+    display: block;
+}
+
+@mixin caracteristicas-btn() {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all .4s;
+}
+
+@mixin caracteristicas-a-footer() {
+    text-align: center;
+    color: #000;
+}
+
+@mixin caracteristicas-i-footer() {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@mixin caracteristicas-div-a-i-footer() {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@mixin caracteristicas-span-footer() {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* Fin mixins portada principal */
+
+/* Mixins login */
+@mixin label-margin-color() {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+@mixin i-caracteristicas() {
+    margin: 0 8px 0 10px;
+    font-size: 18px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+@mixin btn-of-comenzar(){
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    
+    &:active{
+        box-shadow: 5px 5px 10px #000;
+    }
+}
+
+/* Mixins generales */
+@mixin display-flex-XY() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin display-flex-X() {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin display-flex-Y() {
+    display: flex;
+    align-items: center;
+}

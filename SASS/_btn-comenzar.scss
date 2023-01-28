@@ -1,0 +1,62 @@
+@use "mixins";
+@use "variables";
+@use "elementos-generales";
+
+
+.comenzar-btn {
+    @include mixins.display-flex-XY();
+    height: 100vh;
+    background-image: url(../assets/img/Fondo\ login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .main-center {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        background-color: #fff;
+        max-height: 100%;
+        width: 500px;
+        border-radius: 15px;
+        padding: 10px;
+
+        h2 {
+            text-align: center;
+            font-weight: bolder;
+            margin-bottom: 50px;
+        }
+
+        .center-buttons{
+            @include mixins.display-flex-Y();
+            justify-content: space-around;
+            margin-bottom: 20px;
+
+            .btn-register {
+                @include mixins.btn-of-comenzar();
+                background-color: #198754; 
+
+                &:hover {
+                    background-color: #146c43;
+                }
+            }
+
+            .btn-login{
+                @include mixins.btn-of-comenzar();
+                background-color: #0d6efd;
+
+                &:hover {
+                    background-color: #0a58cd;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .comenzar-btn {
+
+        .main-center {
+            width: 300px;
+        }
+    }
+}
