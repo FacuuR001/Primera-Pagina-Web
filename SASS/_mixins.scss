@@ -3,9 +3,8 @@
 /* Mixins portada principal */
 @mixin esconder-mostrar-menu(){
     font-size: 30px;
-    cursor: pointer;
+    cursor: pointer; 
     display: none;
-    transition: .4s;
 }
 
 @mixin menu-hover(){
@@ -36,6 +35,8 @@
 @mixin caracteristicas-div-a-i-footer() {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
 }
 

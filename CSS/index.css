@@ -27,17 +27,13 @@ header .logo:active {
   filter: drop-shadow(0px 0px 10px red);
   transition: 0.1s;
 }
-header #chek-rsp {
-  display: none;
-}
-header .mostrar-menu {
+header #mostrar-menu {
   font-size: 30px;
   cursor: pointer;
   display: none;
-  transition: 0.4s;
   order: 1;
 }
-header .mostrar-menu:hover {
+header #mostrar-menu:hover {
   color: #6cc091;
 }
 header .menu-principal a {
@@ -54,13 +50,12 @@ header .menu-principal a:active {
   color: #449165;
   transition: 0.1s;
 }
-header .menu-principal .esconder-menu {
+header .menu-principal #esconder-menu {
   font-size: 30px;
   cursor: pointer;
   display: none;
-  transition: 0.4s;
 }
-header .menu-principal .esconder-menu::hover {
+header .menu-principal #esconder-menu::hover {
   color: #6cc091;
 }
 
@@ -132,7 +127,24 @@ header .menu-principal .esconder-menu::hover {
 #icons-share .content-footer .subir-archivo, #icons-share .content-footer .recomenda-la-pagina, #icons-share .content-footer .like-pagina {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 15px;
+}
+#icons-share .content-footer .subir-archivo #increment, #icons-share .content-footer .recomenda-la-pagina #increment, #icons-share .content-footer .like-pagina #increment {
+  text-align: center;
+  color: #000;
+  border: none;
+  font-size: 29px;
+  width: 35px;
+  cursor: pointer;
+  background: #c2c2d3;
+}
+#icons-share .content-footer .subir-archivo #increment:hover, #icons-share .content-footer .recomenda-la-pagina #increment:hover, #icons-share .content-footer .like-pagina #increment:hover {
+  color: #0a7e3c;
+}
+#icons-share .content-footer .subir-archivo #increment:active, #icons-share .content-footer .recomenda-la-pagina #increment:active, #icons-share .content-footer .like-pagina #increment:active {
+  color: #105e21;
 }
 #icons-share .content-footer .subir-archivo a, #icons-share .content-footer .recomenda-la-pagina a, #icons-share .content-footer .like-pagina a {
   text-align: center;
@@ -228,11 +240,8 @@ footer .btn-footer .btn-enviar:active {
   header .logo {
     width: 90px;
   }
-  header .mostrar-menu {
+  header #mostrar-menu {
     display: block;
-  }
-  header #chek-rsp:checked ~ .menu-principal {
-    right: 0;
   }
   header .menu-principal {
     position: fixed;
@@ -244,7 +253,6 @@ footer .btn-footer .btn-enviar:active {
     width: 50%;
     height: 100vh;
     background-color: #4d4d5c;
-    transition: 0.8s;
   }
   header .menu-principal a {
     display: block;
@@ -254,7 +262,7 @@ footer .btn-footer .btn-enviar:active {
     background-color: #020202;
     transition: 0.1s;
   }
-  header .menu-principal .esconder-menu {
+  header .menu-principal #esconder-menu {
     display: block;
     position: absolute;
     top: 40px;
@@ -294,6 +302,11 @@ footer .btn-footer .btn-enviar:active {
   }
   footer .content-footer .fomr-contact {
     display: block;
+  }
+}
+@keyframes mostrar {
+  0% {
+    transform: translateX(100px);
   }
 }
 * {

@@ -29,13 +29,10 @@ header{
         }
     }
 
-    #chek-rsp{
-        display: none
-    }
-
-    .mostrar-menu{
+    #mostrar-menu{
         @include mixins.esconder-mostrar-menu();
         order: 1;
+
         &:hover{
             @include mixins.menu-hover();
         }
@@ -45,7 +42,6 @@ header{
         a{
             @include mixins.caracteristicas-btn();
             padding: 0 10px;
-
             &:hover{
                 @include mixins.menu-hover();
             }
@@ -56,8 +52,9 @@ header{
             }
         }
 
-        .esconder-menu{
+        #esconder-menu{
             @include mixins.esconder-mostrar-menu();
+
             &::hover{
                 @include mixins.menu-hover();
             }
@@ -126,6 +123,7 @@ header{
 #icons-share{
     background-color: #c2c2d3;
     padding: 0px 50px;
+
     .content-footer{
         height: 147px;
         width: 100%;
@@ -136,6 +134,23 @@ header{
         
         .subir-archivo, .recomenda-la-pagina, .like-pagina{
             @include mixins.caracteristicas-div-a-i-footer();
+
+                #increment {
+                    @include mixins.caracteristicas-a-footer();
+                    border: none;
+                    font-size: 29px;
+                    width: 35px;
+                    cursor: pointer;
+                    background: #c2c2d3;
+
+                    &:hover{
+                        color: #0a7e3c;
+                    }
+
+                    &:active{
+                        color: #105e21;
+                    }
+                }
 
                 a{
                     @include mixins.caracteristicas-a-footer();
@@ -245,13 +260,10 @@ footer{
             width: 90px;
         }
 
-        .mostrar-menu{
+        #mostrar-menu{
             @include mixins.esconder-mostrar-menu-responsive();
         }
 
-        #chek-rsp:checked ~ .menu-principal{
-            right: 0;
-        }
 
         .menu-principal{
             position: fixed;
@@ -263,7 +275,7 @@ footer{
             width: 50%;
             height: 100vh;
             background-color: variables.$color-principal;
-            transition: .8s;
+            
 
             a{
                 display: block;
@@ -275,17 +287,12 @@ footer{
                 }
             }
 
-            .esconder-menu{
+            #esconder-menu{
                 @include mixins.esconder-mostrar-menu-responsive();
                 position: absolute;
                 top: 40px;
                 right: 40px;
             }
-        }
-    }
-
-    #section-banner{
-        .content-banner{
         }
     }
 }
@@ -332,5 +339,11 @@ footer{
             
             
         }
+    }
+}
+
+@keyframes mostrar {
+    0% {
+    transform: translateX(100px);
     }
 }
